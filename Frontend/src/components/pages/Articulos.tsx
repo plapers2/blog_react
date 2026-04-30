@@ -26,7 +26,7 @@ const Articulos = () => {
     if (datos.status === "success") {
       setArticulos(datos.results);
 
-      const categoriasUnicas = [...new Set(datos.results.map((item: Articulo) => item.categoria))];
+      const categoriasUnicas: string[] = [...new Set(datos.results.map((item: Articulo) => item.categoria))];
 
       setCategorias(categoriasUnicas);
     }
@@ -74,11 +74,7 @@ const Articulos = () => {
                     className="flex-col card bg-base-200/80 w-60 lg:w-70 xl:w-80 2xl:w-96 shadow-sm mb-6 p-5 md:h-130 2xl:h-130"
                   >
                     <figure className="rounded-2xl w-auto h-40 2xl:h-60">
-                      <img
-                        className="w-auto h-full object-cover"
-                        src={`${urlBase}/uploads/${articulo.imagen}`}
-                        alt={articulo.titulo}
-                      />
+                      <img className="w-auto h-full object-cover" src={`${urlBase}/uploads/${articulo.imagen}`} alt={articulo.titulo} />
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title grid grid-rows-2">
