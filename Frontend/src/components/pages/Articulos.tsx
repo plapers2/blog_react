@@ -26,7 +26,7 @@ const Articulos = () => {
     if (datos.status === "success") {
       setArticulos(datos.results);
 
-      const categoriasUnicas: string[] = [...new Set(datos.results.map((item: Articulo) => item.categoria))];
+      const categoriasUnicas: string[] = [...new Set<string>(datos.results.map((item: Articulo) => item.categoria))];
 
       setCategorias(categoriasUnicas);
     }
