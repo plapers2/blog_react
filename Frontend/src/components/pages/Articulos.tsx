@@ -16,7 +16,7 @@ const Articulos = () => {
   const [categorias, setCategorias] = useState<string[]>([]);
   const [mensaje, setMensaje] = useState("");
   const [tipoMensaje, setTipoMensaje] = useState("");
-  const urlBase = "http://localhost:3000";
+  const urlBase = "https://blog-react-meqb.onrender.com";
 
   async function consumirApi() {
     const url = `${urlBase}/api/articulos/listartodos`;

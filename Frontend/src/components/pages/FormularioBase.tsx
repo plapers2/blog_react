@@ -7,7 +7,7 @@ interface Categoria {
 const FormularioBase = () => {
   const { cambiado, guardarArticulo, mensaje, tipoMensaje } = UseFormulario();
   const [categorias, setCategorias] = useState<Categoria[]>([]);
-  const urlBase = "http://localhost:3000/api";
+  const urlBase = "https://blog-react-meqb.onrender.com/api";
 
 
 
